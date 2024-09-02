@@ -19,11 +19,8 @@ def parse_arguments(parser):
 		 				operation on choosen field")	
 	
 	parser.add_argument("-f","--field",choices=["Year of release", "Rating", "Watch  hour ",
-														"Box office collection","User reviews", 
-														"Awards"
-													   ],
-													   default = 'Rating',
-													   help="to display all above the input rating")
+                        "Box office collection","User reviews", "Awards"],
+                        default = 'Rating',help="to display all above the input rating")
 	
 	subparser = parser.add_subparsers(help="type of output",required=True)
 
@@ -75,8 +72,9 @@ def process_arguments(arguments,data):
 def main():
 
 	parser = argparse.ArgumentParser(prog='mda', 
-									description='below are the available options, for processing movie data',
-									prefix_chars='-')
+                                     description='below are the available options, \
+                                     for processing movie data',
+                                     prefix_chars='-')
 	
 	arguments = parse_arguments(parser)
 	
