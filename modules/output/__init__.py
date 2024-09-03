@@ -1,5 +1,5 @@
 
-__all__ = ['terminal','file','email']
+__all__ = ['terminal','file']
 
 from . import *
 

@@ -53,20 +53,14 @@ def process_arguments(arguments,data):
 
 	if search_res_data or operation_res_data :
 		data_str =("Search Query Results" + '\n' +'##########' + '\n' +
-				   json.dumps(search_res_data) + '\n' + '\n' +
-				   'Operation Query Results' + "\n" +'##########' + '\n' +
-				   arguments.operation + " " + json.dumps(operation_res_data))
+                   json.dumps(search_res_data) + '\n' + '\n' +
+                   'Operation Query Results' + "\n" +'##########' + '\n' +
+                   arguments.operation + " " + json.dumps(operation_res_data))
 		if "path" in arguments :
 			f = file(arguments.path,data_str)
 		else:
 			t = terminal(data_str)
 			t.print()
-
-
-			
-
-	
-
 
 
 def main():
@@ -81,7 +75,6 @@ def main():
 	data = extract('./assets/data.csv').data()
 
 	process_arguments(arguments,data)
-
 
 
 
